@@ -7778,7 +7778,9 @@ void bgp_init(unsigned short instance)
 	bgp_attr_init();
 #ifndef FUZZING
 	bgp_debug_init();
+#endif
 	bgp_community_alias_init();
+#ifndef FUZZING
 	bgp_dump_init();
 #endif
 	bgp_route_init();
